@@ -5,7 +5,11 @@ import Registration from "./Registration";
 function App() {
   return (
     <>
-      <Registration />
+      <div className="card">
+        <div className="card-body mx-auto">
+          <Registration />
+        </div>
+      </div>
     </>
   );
 }
