@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import { signupSchema } from "./schemas";
 
 const initialValues = {
   name: "",
@@ -11,10 +12,12 @@ const initialValues = {
 const Registration = () => {
   const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
     initialValues: initialValues,
+    validationSchema: signupSchema,
     onSubmit: (values) => {
       console.log(values);
     },
   });
+  console.log(errors);
 
   return (
     <>
