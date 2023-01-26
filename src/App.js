@@ -1,9 +1,11 @@
+import React from "react";
 import "./App.css";
+import Registration from "./Registration";
 
 function App() {
   return (
     <>
-      <h1>hlo</h1>
+      <Registration />
     </>
   );
 }
