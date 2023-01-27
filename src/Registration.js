@@ -27,7 +27,7 @@ const Registration = () => {
         setData([...data, values]);
       },
     });
-  console.log(errors);
+  // console.log(errors);
 
   return (
     <>
