@@ -31,7 +31,7 @@ const Registration = () => {
 
   return (
     <>
-      <div className="flex justify-around mt-10 gap-5 flex-wrap">
+      <div className="flex justify-around my-10 gap-5 flex-wrap">
         <div className="card ">
           <div className="card-body">
             <h1 className="font-bold text-2xl mb-5"> Student Registration </h1>
@@ -242,7 +242,7 @@ const Registration = () => {
             </form>
           </div>
         </div>
-        <div className="card bg-gray-500 p-6">
+        <div className="card bg-grey-300 p-6">
           <FetchData data={data} />
         </div>
       </div>
