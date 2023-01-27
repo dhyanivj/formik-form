@@ -9,8 +9,5 @@ export const signupSchema = Yup.object().shape({
     [Yup.ref("password"), null],
     "Passwords must match"
   ),
-  acceptTerms: Yup.bool().oneOf(
-    [true],
-    "Accept Terms & Conditions is required"
-  ),
+  acceptTerms: Yup.bool().oneOf([true], "Please accept Terms & Conditions"),
 });

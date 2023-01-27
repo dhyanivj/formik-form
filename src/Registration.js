@@ -77,9 +77,10 @@ const Registration = () => {
           </label>
 
           <select className="select">
-            <option>Computer Science</option>
-            <option>Mechanical</option>
-            <option>Civil Engg</option>
+            <option value="">Please select your branch</option>
+            <option value="cse">Computer Science</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="civil">Civil Engg</option>
           </select>
         </div>
 
@@ -173,11 +174,13 @@ const Registration = () => {
             <span className="text-red-800">{errors.confirmPassword}</span>
           ) : null}
         </div>
+
         <div className="mb-4">
           <label className="flex cursor-pointer gap-2">
             <input
               type="checkbox"
               name="acceptTerms"
+              onChange={handleChange}
               value={values.acceptTerms}
               className={`checkbox ${
                 errors.acceptTerms && touched.acceptTerms
