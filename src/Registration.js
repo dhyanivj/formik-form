@@ -9,10 +9,10 @@ const initialValues = {
   branch: "",
   phone: "",
   subject: [],
-  mode: "",
+  offlineMode: false,
   password: "",
   confirmPassword: "",
-  acceptTerms: true,
+  acceptTerms: false,
 };
 
 const Registration = () => {
@@ -27,7 +27,7 @@ const Registration = () => {
         setData([...data, values]);
       },
     });
-  // console.log(errors);
+  console.log(errors);
 
   return (
     <>
@@ -76,7 +76,16 @@ const Registration = () => {
             Branch
           </label>
 
-          <select className="select">
+          <select
+            name="branch"
+            as="select"
+            className={`select ${
+              errors.branch && touched.branch ? "border-red-800" : ""
+            }`}
+            value={values.branch}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          >
             <option value="">Please select your branch</option>
             <option value="cse">Computer Science</option>
             <option value="mechanical">Mechanical</option>
@@ -108,29 +117,58 @@ const Registration = () => {
           <label htmlFor="subject" className="font-semibold">
             Subject
           </label>
-          <label className="flex cursor-pointer gap-2">
-            <input type="checkbox" name="subject" className="checkbox" />
-            <span>Subject 1</span>
-          </label>
-          <label className="flex cursor-pointer gap-2">
-            <input type="checkbox" name="subject" className="checkbox" />
-            <span>Subject 2</span>
-          </label>
-          <label className="flex cursor-pointer gap-2">
-            <input type="checkbox" name="subject" className="checkbox" />
-            <span>Subject 3</span>
-          </label>
+          <div role="group" aria-labelledby="checkbox-group">
+            <label className="flex cursor-pointer gap-2">
+              <input
+                type="checkbox"
+                name="subject"
+                value="subject1"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className="checkbox"
+              />
+              <span>Subject 1</span>
+            </label>
+            <label className="flex cursor-pointer gap-2">
+              <input
+                type="checkbox"
+                name="subject"
+                value="subject2"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className="checkbox"
+              />
+              <span>Subject 2</span>
+            </label>
+            <label className="flex cursor-pointer gap-2">
+              <input
+                type="checkbox"
+                name="subject"
+                value="subject3"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className="checkbox"
+              />
+              <span>Subject 3</span>
+            </label>
+          </div>
+
+          {errors.subject && touched.subject ? (
+            <span className="text-red-800">{errors.subject}</span>
+          ) : null}
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 ">
           <label htmlFor="subject" className="font-semibold">
-            Preferred Classes Mode
+            Opt for offline classes
           </label>
-          <div>
-            <span> Offline</span>
-            <input type="checkbox" name="mode" className="switch mx-2" />
-            <span>Online</span>
-          </div>
+          <input
+            type="checkbox"
+            name="offlineMode"
+            className="switch ml-10"
+            onChange={handleChange}
+            value={values.offlineMode}
+          />
         </div>
 
         <div className="mb-4">
