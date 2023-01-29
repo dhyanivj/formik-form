@@ -31,7 +31,7 @@ const Registration = () => {
 
   return (
     <>
-      <div className="flex justify-around my-10 gap-5 flex-wrap">
+      <div className="flex justify-around py-10 gap-5 flex-wrap">
         <div className="card ">
           <div className="card-body">
             <h1 className="font-bold text-2xl mb-5"> Student Registration </h1>
@@ -43,9 +43,8 @@ const Registration = () => {
                 <input
                   type="text"
                   id="name"
-                  className={`input ${
-                    errors.name && touched.name ? "border-red-800" : ""
-                  }`}
+                  className={`input ${errors.name && touched.name ? "border-red-800" : ""
+                    }`}
                   name="name"
                   value={values.name}
                   onChange={handleChange}
@@ -63,9 +62,8 @@ const Registration = () => {
                 <input
                   type="email"
                   id="email"
-                  className={`input ${
-                    errors.email && touched.email ? "border-red-800" : ""
-                  }`}
+                  className={`input ${errors.email && touched.email ? "border-red-800" : ""
+                    }`}
                   name="email"
                   value={values.email}
                   onChange={handleChange}
@@ -83,9 +81,8 @@ const Registration = () => {
                 <select
                   name="branch"
                   as="select"
-                  className={`select ${
-                    errors.branch && touched.branch ? "border-red-800" : ""
-                  }`}
+                  className={`select ${errors.branch && touched.branch ? "border-red-800" : ""
+                    }`}
                   value={values.branch}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -104,9 +101,8 @@ const Registration = () => {
                 <input
                   type="number"
                   id="phone"
-                  className={`input ${
-                    errors.phone && touched.phone ? "border-red-800" : ""
-                  }`}
+                  className={`input ${errors.phone && touched.phone ? "border-red-800" : ""
+                    }`}
                   name="phone"
                   value={values.phone}
                   onChange={handleChange}
@@ -182,9 +178,8 @@ const Registration = () => {
                 <input
                   type="password"
                   id="password"
-                  className={`input ${
-                    errors.password && touched.password ? "border-red-800" : ""
-                  }`}
+                  className={`input ${errors.password && touched.password ? "border-red-800" : ""
+                    }`}
                   name="password"
                   value={values.password}
                   onChange={handleChange}
@@ -202,11 +197,10 @@ const Registration = () => {
                 <input
                   type="password"
                   id="confirmPassword"
-                  className={`input ${
-                    errors.confirmPassword && touched.confirmPassword
+                  className={`input ${errors.confirmPassword && touched.confirmPassword
                       ? "border-red-800"
                       : ""
-                  }`}
+                    }`}
                   name="confirmPassword"
                   value={values.confirmPassword}
                   onChange={handleChange}
@@ -224,11 +218,10 @@ const Registration = () => {
                     name="acceptTerms"
                     onChange={handleChange}
                     value={values.acceptTerms}
-                    className={`checkbox ${
-                      errors.acceptTerms && touched.acceptTerms
+                    className={`checkbox ${errors.acceptTerms && touched.acceptTerms
                         ? "border-red-800"
                         : ""
-                    }`}
+                      }`}
                   />
                   <span>Accept terms and conditions</span>
                 </label>
