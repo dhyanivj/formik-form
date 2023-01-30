@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/formik-form/static/css/main.1db81b96.css",
+    "main.css": "/formik-form/static/css/main.12023376.css",
     "main.js": "/formik-form/static/js/main.4e82712d.js",
     "index.html": "/formik-form/index.html",
-    "main.1db81b96.css.map": "/formik-form/static/css/main.1db81b96.css.map",
+    "main.12023376.css.map": "/formik-form/static/css/main.12023376.css.map",
     "main.4e82712d.js.map": "/formik-form/static/js/main.4e82712d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1db81b96.css",
+    "static/css/main.12023376.css",
     "static/js/main.4e82712d.js"
   ]
 }
