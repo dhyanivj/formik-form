@@ -1,4 +1,8 @@
 
+## Deployed URL
+
+https://dhyanivj.github.io/formik-form/
+
 ## Clone project 
 
 Clone github repo
@@ -18,9 +22,14 @@ npm install
 npm start
 ```
     
-## Deployed URL
+## Deployment
 
-https://dhyanivj.github.io/formik-form/
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
 
 ## Build
 
@@ -28,15 +37,6 @@ To create production build
 
 ```bash
   npm run build
-```
-
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
 ```
 
 
